@@ -1,0 +1,20 @@
+meta = my $init_metadata = {
+      'actionlog' => [
+        { 'actor'   => whoami(),# hostname
+          'time'    => time(),  # time
+          'type'    => 'build', # build
+          'actions' => [
+            { 'summary' => 'multipkg initialiation',
+              'text'    => "multipkg version: " # description:multipkg version: multipkg-1.2-1453765525
+                                                              invoked as: /usr/bin/multipkg -t -v .
+                . MULTIPKG_VERSION . "\n"
+                . "invoked as: $0 "
+                . join( ' ', @ARGV ) . "\n",
+            },
+          ],
+        },
+      ],
+    };
+
+# get text: @{$init_metadata->{'actionlog'}}[0]->{'actions'}[0]->{'text'}
+# get actor: @{$init_metadata->{'actionlog'}}['actor']

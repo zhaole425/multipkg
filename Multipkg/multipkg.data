@@ -1,0 +1,106 @@
+$VAR1 = bless( {                                                                                                        
+                 'info' => bless( {                                                               
+                                    'verbose' => 1,                                                 
+                                    'platforms' => [                                                   
+                                                     'default',
+                                                     'linux', 
+                                                     'x86_64',           
+                                                     'redhat',
+                                                     'rpm',     
+                                                     'override'   
+                                                   ],                            
+                                    'data' => {                                      
+                                                'conflictlist' => '',                                                     
+                                                'obsoletelist' => '',                                                                   
+                                                'arch' => 'noarch',
+                                                'author' => 'nobody@null',
+                                                'sourcedir' => '/home/fuxi/multipkg/source',
+                                                'summary' => 'Automation for package builds (supports RPM, deb)',
+                                                'conflicts' => [],                      
+                                                'url' => '',                         
+                                                'requires' => [                                           
+                                                                'perl-Git',
+                                                                'perl-Error',
+                                                                'perl-YAML-Syck',                                                                                                                                                                                                  'subversion-perl'                                    
+                                                              ],                                                                       
+                                                'whoami' => 'root@localhost.localdomain',                                               
+                                                'requirelist' => 'perl-Git, perl-Error, perl-YAML-Syck, subversion-perl',
+                                                'epoch' => '20',                                     
+                                                'version' => '1.2',               
+                                                'name' => 'multipkg',                   
+                                                'buildprefix' => '/usr',             
+                                                'perl' => '/usr/bin/perl',                                
+                                                'provides' => [      
+                                                                'Seco::Multipkg',                                                                    
+                                                                'perl-seco-cpan',
+                                                                'perl-seco-class'       
+                                                                'perl-seco-cpan',                                                                                                                         [42/1999]
+                                                                'perl-seco-class'
+                                                              ],       
+                                                'packagetype' => 'rpm',
+                                                'providelist' => 'Seco::Multipkg, perl-seco-cpan, perl-seco-class',
+                                                'shebangmunge' => '1',                                    
+                                                'autoreqprov' => 'no',                                                    
+                                                'obsoletes' => [],                                                      
+                                                'rootdir' => '/home/fuxi/multipkg/root',          
+                                                'xfercmd' => '/usr/bin/curl -s -o %s %u',           
+                                                'os_specific' => 'no',                                 
+                                                'prefix' => '/'
+                                              },              
+                                    'directory' => '/home/fuxi/multipkg',
+                                    'meta' => {               
+                                                'actionlog' => [
+                                                                 {
+                                                                   'actions' => [
+                                                                                  {  
+                                                                                    'summary' => 'multipkg initialiation',
+                                                                                    'text' => 'multipkg version: multipkg-1.2-1453765525invoked as: /usr/bin/multipkg -t -v .                              '                                                                         
+                                                                                  }         
+                                                                                ],                               
+                                                                   'time' => 1523636605,
+                                                                   'type' => 'build',
+                                                                   'actor' => 'root@localhost.localdomain'
+                                                                 },        
+                                                                 {           
+                                                                   'actions' => [                                                                                                                                                                                                                    {                                  
+                                                                                    'summary' => 'Seco::Multipkg::Info initialization',
+                                                                                    'text' => 'multipkg version: multipkg-1.2-1453765525
+'                                                                                                                        
+                                                                                  }                  
+                                                                                ],
+                                                                   'time' => 1523636754,
+                                                                   'type' => 'build',
+                                                                   'actor' => 'root@localhost.localdomain'
+                                                                 }   
+                                                               ]                                                                                     
+                                              },                                 
+                                    'overrides' => {},                                  
+                                              },                                                                                                                                                           [0/1999]
+                                    'overrides' => {},                           
+                                    'confdir' => '/usr/share/multipkg',
+                                    'platform' => undef,               
+                                    'scripts' => {                                                                 
+                                                   'transform' => '/home/fuxi/multipkg/scripts/transform',
+                                                   'supervisepreun.sh' => '/usr/share/multipkg/scripts/supervisepreun.sh',
+                                                   'supervisepost.sh' => '/usr/share/multipkg/scripts/supervisepost.sh',
+                                                   'build' => '/home/fuxi/multipkg/scripts/build',
+                                                   'logrun' => '/usr/share/multipkg/scripts/logrun',
+                                                   'gembuild' => '/usr/share/multipkg/scripts/gembuild'
+                                                 }             
+                                  }, 'Seco::Multipkg::Info' ),
+                 'verbose' => 1,                                         
+                 'startdir' => undef,                         
+                 'directory' => '/home/fuxi/multipkg',          
+                 'meta' => {                                      
+                             'actionlog' => [                                    
+                                              $VAR1->{'info'}{'meta'}{'actionlog'}[0]
+                                            ]                                                                             
+                           },                                                                                                           
+                 'force' => undef,                                 
+                 'warn_on_error' => 1,                                    
+                 'cwd' => undef,                                                            
+                 'overrides' => $VAR1->{'info'}{'overrides'},                                                    
+                 'confdir' => '/usr/share/multipkg',                                    
+                 'platform' => undef,                                                
+                 'cleanup' => 1                                                                           
+               }, 'Seco::Multipkg' ); 
